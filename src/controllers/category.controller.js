@@ -9,7 +9,7 @@ const createCategory = catchAsync(async (req, res) => {
 
 const deleteCategory = catchAsync(async (req, res) => {
   await categoryService.deleteCategoryById(req.params.categoryId);
-  res.status(httpStatus.NO_CONTENT).send();
+  res.status(httpStatus.NO_CONTENT).send('product Deleted');
 });
 
 const updateCategory = catchAsync(async (req, res) => {
